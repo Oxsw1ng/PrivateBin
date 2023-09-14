@@ -13,8 +13,8 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         env:
-          TEST_NAME: Scarlett
+          TEST_NAME: PHPUnit
         with:
-          bootstrap: vendor/autoload.php
+          bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
           args: --coverage-text
