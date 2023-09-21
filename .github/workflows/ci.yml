@@ -12,6 +12,10 @@ jobs:
 
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
+
+      - name: Code Coverage Report
+        uses: Oxsw1ng/PrivateBin@master
+
         env:
           TEST_NAME: PHPUnit
         with:
@@ -19,3 +23,12 @@ jobs:
           php_extensions: "xdebug gd"
           bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
+          filename: cobertura.xml
+          badge: true
+          fail_below_min: true
+          format: markdown
+          hide_branch_rate: false
+          hide_complexity: true
+          indicators: true
+          output: both
+          thresholds: '50 80'
