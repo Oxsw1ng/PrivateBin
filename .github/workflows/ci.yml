@@ -14,7 +14,7 @@ jobs:
         uses: php-actions/phpunit@v3
 
       - name: Code Coverage Report
-        uses: Oxsw1ng/PrivateBin@master
+        uses: Oxsw1ng/PrivateBin
 
         env:
           TEST_NAME: PHPUnit
