@@ -20,6 +20,10 @@ jobs:
           php_extensions: "xdebug gd"
           bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
+
+      - name: Code Coverage Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
           filename: cobertura.xml
           badge: true
           fail_below_min: true
