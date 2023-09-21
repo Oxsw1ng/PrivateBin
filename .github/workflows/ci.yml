@@ -11,7 +11,7 @@ jobs:
       - uses: php-actions/composer@v6
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v9.6.11
+        uses: php-actions/phpunit@9.6.11
         env:
           TEST_NAME: PHPUnit
         with:
