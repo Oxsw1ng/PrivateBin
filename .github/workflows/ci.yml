@@ -19,4 +19,4 @@ jobs:
           php_extensions: "xdebug gd"
           bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
-          args: --coverage-text
+          args: --coverage-xml code_coverage.xml
