@@ -16,7 +16,7 @@ jobs:
           TEST_NAME: PHPUnit
         with:
           version: 9.6.11
-          php_extensions: "xdebug"
+          php_extensions: "xdebug gd"
           bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
           args: --coverage-text
