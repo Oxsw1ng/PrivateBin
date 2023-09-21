@@ -15,6 +15,7 @@ jobs:
         env:
           TEST_NAME: PHPUnit
         with:
+          php_extensions: "xdebug"
           bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
           args: --coverage-text
