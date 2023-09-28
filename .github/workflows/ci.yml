@@ -35,3 +35,6 @@ jobs:
           indicators: true
           output: both
           thresholds: '50 80'
+
+      - name: Markdown Report
+        run : cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
