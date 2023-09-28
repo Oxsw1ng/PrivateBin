@@ -1,4 +1,4 @@
-name: CI
+name: Code Sniffer
 
 on: [push]
 
@@ -17,4 +17,4 @@ jobs:
         with:
           php_version: 8.1
           path: lib/
-          standard: PSR1
+          standard: PSR12
