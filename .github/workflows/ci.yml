@@ -15,11 +15,13 @@ jobs:
 
         env:
           TEST_NAME: PHPUnit
+          XDEDUG_MODE : coverage
         with:
           version: 9.6.11
           php_extensions: "xdebug gd"
           bootstrap: tst/Bootstrap.php
           configuration: phpunit.xml
+          coverage_cobertura : cobertura.xml
 
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
