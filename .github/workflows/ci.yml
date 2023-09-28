@@ -15,7 +15,7 @@ jobs:
 
         env:
           TEST_NAME: PHPUnit
-          XDEDUG_MODE : coverage
+          XDEBUG_MODE : coverage
         with:
           version: 9.6.11
           php_extensions: "xdebug gd"
