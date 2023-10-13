@@ -14,8 +14,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Copy to SCP
-      uses: dominikbulaj/scp-files@v1
+      uses: appleboy/scp-action@v0.1.4
       with:
+        host: ec2-35-180-174-115.eu-west-3.compute.amazonaws.com
+        username: ec2-user
         source: ./
-        target: ec2-user@ec2-35-180-174-115.eu-west-3.compute.amazonaws.com:/var/www/html
+        target: /var/www/html
         key: ${{ secrets.KEY }}
