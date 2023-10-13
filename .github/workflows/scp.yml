@@ -16,8 +16,9 @@ jobs:
     - name: Copy to SCP
       uses: appleboy/scp-action@v0.1.4
       with:
-        host: ec2-35-180-174-115.eu-west-3.compute.amazonaws.com
-        username: ec2-user
-        source: ./
-        target: /var/www/html
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        source: ${{ secrets.SOURCE }}
+        port: ${{ secrets.PORT }}
+        target: ${{ secrets.TARGET }}
         key: ${{ secrets.KEY }}
