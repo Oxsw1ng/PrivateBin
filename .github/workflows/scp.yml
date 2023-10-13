@@ -1,0 +1,21 @@
+name: Copy to SCP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Copy to SCP
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        source: ./
+        target: ec2-user@ec2-35-180-174-115.eu-west-3.compute.amazonaws.com:/var/www/html
+        key: ${{ secrets.KEY }}
