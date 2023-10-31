@@ -1,2 +1,2 @@
 # INSTANCE
-ec2-35-180-174-115.eu-west-3.compute.amazonaws.com
+ec2-13-38-216-221.eu-west-3.compute.amazonaws.com
